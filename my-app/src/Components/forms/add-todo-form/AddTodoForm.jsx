@@ -1,23 +1,23 @@
 function AddTodoForm (props) {
     return (
         <form>
-            <div class="mb-3">
-                <label for="todoName" class="form-label">
+            <div className="mb-3">
+                <label htmlFor="todoName" className="form-label">
                     Email address
                 </label>
                 <input
                     type="text"
-                    class="form-control" 
+                    className="form-control" 
                     id="todoName" 
                 />
             </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="completed"/>
-                <label class="form-check-label" for="exampleCheck1">
+            <div className="mb-3 form-check">
+                <input type="checkbox" className="form-check-input" id="completed"/>
+                <label className="form-check-label" for="exampleCheck1">
                     Completed
                 </label>
             </div>
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" className="btn btn-primary">
                 Submit
             </button>
         </form>

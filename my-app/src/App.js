@@ -2,9 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import TodosHome from './Components/todos/todo-home';
 
+
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <TodosHome/>
     </div>
   );
