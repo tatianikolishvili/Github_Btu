@@ -2,6 +2,7 @@ import { useState } from 'react';
 import TodosHome from './Components/todos/todo-home';
 import Counter from './Components/pages/counter';
 import Navigation from './Components/navigation';
+import Auth from './Components/pages/Authorization';
 import Theme from './Components/theme'
 import './App.css';
 
@@ -10,13 +11,14 @@ import './App.css';
 
 function App() {
   const [page, setPage] = useState({
-    todoHome: false,
-    Counter : true,
+    todoHome: true,
+    Counter : false,
+    Auth : true,
   })
 
 
 
-  const [currentPage, setCurrentPage] = useState("Counter")
+  const [currentPage, setCurrentPage] = useState("todoHome")
   const onPageChange = (pageKey) => {
     const updates = { ...page };
     let newCurrentPage = "";
@@ -38,8 +40,10 @@ function App() {
     <div className="container">
       <Navigation onPageChange = {onPageChange} pages={page}/>
       <Theme page={currentPage}> 
-        {page.todoHome && <TodosHome/>}
-        {page.Counter && <Counter/>}  
+
+      {page.todoHome && <TodosHome/>}
+      {page.Counter && <Counter/>}
+      {page.Auth && <Auth/> }
       </Theme>
       
     </div>

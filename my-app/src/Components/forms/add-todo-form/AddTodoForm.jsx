@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useContext} from "react";
+import { TodoProvider } from "../../../context/TodoProvider";
 
-function AddTodoForm ({onTodoAdd}) {
+function AddTodoForm ({props}) {
+    const { onTodoAdd } = useContext(TodoProvider);
     const [title, setTitle] = useState("");
     const [completed, setCompleted] = useState(false);
 

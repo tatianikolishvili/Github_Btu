@@ -35,10 +35,11 @@ class Counter extends React.Component{
         });
     };
     onReset = () => {
-        this.setState({
-            ...this.state,
-            count: 0,
-        });
+        // this.setState({
+        //     ...this.state,
+        //     count: 0,
+        // });
+        throw new SyntaxError ("Reset");
     };
     onMinus = () => {
         this.setState((prevState) => {

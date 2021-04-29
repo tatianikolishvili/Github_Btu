@@ -1,23 +1,15 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import "./todo-list.css";   
 import TodoListItem from "./TodoListItem";
-function TodoList ({ data = [], onTodoChange }) {
-    useEffect(() => {
-        console.log(data);
-    }, [data]);
-
-    let listHtml = null;
-    if (data.length) {
-        
-    }
+import {TodoProvider} from '../../../context/TodoProvider'
+function TodoList (props) {
+    const {todoList} = useContext(TodoProvider);
     return (
         <div className="list-group">
-            {listHtml = data.map((todo) => {
-            return <TodoListItem todo={todo} key= {todo.id} onChange = {onTodoChange}/>
+            {todoList.map((todo) => {
+            return <TodoListItem todo={todo} key= {todo.id}/>
         })}
-           
-           
       </div>
     );
-}
+    }
 export default TodoList;

@@ -9,6 +9,14 @@ const Navigation = ({onPageChange}) => {
                 <li className="nav-item">
                     <button
                     className="nav-link active"
+                    onClick={() => onPageChange('Auth')}
+                    > Auth
+                    </button>
+                </li>
+            
+                <li className="nav-item">
+                    <button
+                    className="nav-link active"
                     onClick={() => onPageChange('todoHome')}
                     >Todo Home
                     </button>
